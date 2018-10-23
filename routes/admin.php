@@ -14,7 +14,6 @@ Route::group(['namespace' => 'Admin'], function(){
 	Route::post('categories/update/{id}','CategoryController@update')->name('category.update');
 	Route::get('categories/destroy/{id}','CategoryController@destroy')->name('category.destroy')->middleware('isAdmin');
 
-
 	Route::get('admins','AdminController@index')->name('admin.index')->middleware('isAdmin');
 	Route::get('admins/create','AdminController@create')->name('admin.create')->middleware('isAdmin');
 	Route::post('admins/store','AdminController@store')->name('admin.store')->middleware('isAdmin');
@@ -22,8 +21,6 @@ Route::group(['namespace' => 'Admin'], function(){
 	Route::post('admins/update/{id}','AdminController@update')->name('admin.update');
 	Route::get('admins/destroy/{id}','AdminController@destroy')->name('admin.destroy')->middleware('isAdmin');
 	Route::get('admins/profile/{id}','AdminController@getProfile')->name('admin.getProfile');
-
-
 	
 	Route::get('admins/profile/edit/{id}','ProfileController@edit')->name('profile.edit');
 	Route::post('admins/profile/update/{id}','ProfileController@update')->name('profile.update');
